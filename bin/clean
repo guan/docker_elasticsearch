@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker kill elasticsearch >> /dev/null
+docker rm elasticsearch >> /dev/null
+
+
+echo "elasticsearch has Destroyed"

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ID=$(docker run -d -p 9200:9200 -name elasticsearch yoshiso/elasticsearch) >> /dev/null
+IP=$(docker inspect -format="{{ .NetworkSettings.IPAddress }}" $ID)
+echo "elasticsearch running at : $IP"
