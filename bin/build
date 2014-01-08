@@ -1,8 +1,10 @@
 #!/bin/bash
 
-#Workin directory の取得
+USER="yoshiso"
+
+#Workin directory
 cd `/usr/bin/dirname $0`
 cd ..
 WORKING_DIR=`pwd`
 
-docker build -t yoshiso/elasticsearch $WORKING_DIR
+docker build -t $USER/elasticsearch $WORKING_DIR
